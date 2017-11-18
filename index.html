@@ -17,7 +17,7 @@
         $users.appendTo($body);
         var $refresh = $('<button id="newTweetButton">Refresh Tweet</button>');
         $refresh.appendTo($body);
-         var $display = $('<table><thead><tr><th>From</th><th>Tweet</th><th>Time</th></tr></thead><tbody id="tentry"></tbody></table>');
+        var $display = $('<table><thead><tr><th>From</th><th>Tweet</th><th>Time</th></tr></thead><tbody id="tentry"></tbody></table>');
         $display.appendTo($body);
 
         $('#newTweetButton').on('click',function(){
@@ -25,7 +25,7 @@
           for(var i = 0; i < streams.home.length - 1; i++){
             var tweet = streams.home[i];
             if(tweet.created_at.getTime() > oldTimestamp){
-              var userpage = "userpage" + index + ".html";
+              var userpage = "userpage.html?u="+tweet.user;
               var $tweet = $('<tr><td><a href='+ userpage+ '>'  + '@' + tweet.user + '</a></td><td>' + tweet.message  + '</td><td>'+ tweet.created_at + '</td></tr>');
               $tweet.prependTo("#tentry"); 
             }
@@ -36,7 +36,7 @@
         var oldTimestamp = streams.home[index].created_at.getTime();
         while(index >= 0){
           var tweet = streams.home[index];
-          var userpage = "userpage" + index + ".html";
+          var userpage = "userpage.html?u="+tweet.user;
           var $tweet = $('<tr><td><a href='+ userpage+ '>'  + '@' + tweet.user + '</a></td><td>' + tweet.message  + '</td><td>'+ tweet.created_at + '</td></tr>');
          $tweet.appendTo("#tentry"); 
           index -= 1;
