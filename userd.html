@@ -15,12 +15,13 @@
         console.dir(userName);
         var $body = $('body');
         $body.html('');
-        var $indexHeader = $('<header><h1><a href="index.html">Home</a></h1></header>');
+        var $indexHeader = $('<header></header>');
         $indexHeader.text('Twittler');
         $indexHeader.appendTo($body);
+        var $addSpace = $('<div class="divspace"><a href="index.html">Home</a></div>');
+        $addSpace.appendTo($body);
         var $user = '<section><table class="center"><thead><tr><th id="userDisplay"></th><th>Time Created</th></tr></thead><tbody id="tweetsDisplay"></tbody></table></section>';
         ($body).append($user);
-        // var userName = users[0];
         $('#userDisplay').text('@' + userName);
         var userTweets = streams.users[userName];
         console.dir(userTweets);
