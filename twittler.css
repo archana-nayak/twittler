@@ -37,7 +37,7 @@ header .homepage{
 .divspace {
   width: 100px;
   height: 100px;
-  margin-top: 50px;
+  margin-top: auto;
   margin-right: auto;
   margin-bottom: auto;
   margin-left: 0;
