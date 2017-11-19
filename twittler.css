@@ -1,0 +1,66 @@
+header {
+     background : #395870;
+     font-size : 48px;
+     text-align: center;
+     color: white;
+}
+button {
+  color: #fff;
+  background-color: #395870;/*#337ab7;*/
+  border-color: black;/*#2e6da4;*/
+  position: all;
+  width:10em;
+  height:3em;
+  margin :0 auto;
+  font-size: 14px;
+}
+.buttonSection{
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+header .homepage{
+  font-size: 10;
+  text-align: left;
+  color: white;
+}
+.usersFollowing {
+  background : #f0f0f2;
+  font-size : 28px;
+  text-align: center;
+  color: black;
+  height: 85px;
+}
+table.center {
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #4a4a4d;
+  font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  table-layout: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+th,
+td {
+  padding: 10px 15px;
+  vertical-align: middle;
+}
+thead {
+  background: #395870;
+  color: #fff;
+}
+th:first-child {
+  text-align: left;
+}
+tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+td {
+  border-bottom: 1px solid #cecfd5;
+  border-right: 1px solid #cecfd5;
+}
