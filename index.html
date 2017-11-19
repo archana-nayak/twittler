@@ -15,9 +15,9 @@
         $body.html('');
         var $indexHeader = $('<header></header>');
         $indexHeader.text('Twittler');
-        $homeLink = $('<h1 class="homepage"><a href="index.html">Home</a></h1>');
-        $homeLink.appendTo($indexHeader);
         $indexHeader.appendTo($body);
+        $homeLink = $('<div class="homepage"><a href="index.html">Home</a></div>');
+        $homeLink.appendTo($body);
         var usersFollowed = users;
         // var $users  = $('<span class="usersFollowing"><div><table><tr colspan="2"></tr></table></div></span>');
         // $users.text('Following: ' + usersFollowed);
