@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head lang="en">
+    <title>Welcome To Twittler</title>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <link rel="stylesheet" href="twittler.css">
   </head>
   <body>
-    
+    <div class="twittlerHead"></div>
     <script>
 
       $(document).ready(function(){
         var $body = $('body');
         $body.html('');
+        var $indexHeader = $('<header></header>');
+        $indexHeader.text('Twittler');
+        $homeLink = $('<h1 class="homepage"><a href="index.html">Home</a></h1>');
+        $homeLink.appendTo($indexHeader);
+        $indexHeader.appendTo($body);
         var usersFollowed = users;
-        var $users  = $('<span><table><tr><span><div></div></span></tr><tr id="addRefresh"></tr></table></span>');
-        $users.text(usersFollowed);
-        $users.appendTo($body);
-        var $refresh = $('<button id="newTweetButton">Refresh Tweet</button>');
+        // var $users  = $('<span class="usersFollowing"><div><table><tr colspan="2"></tr></table></div></span>');
+        // $users.text('Following: ' + usersFollowed);
+        // $users.appendTo($body);
+        var $refresh = $('<div class="buttonSection"><button id="newTweetButton">Refresh Tweet</button></div>');
         $refresh.appendTo($body);
-        var $display = $('<table><thead><tr><th>From</th><th>Tweet</th><th>Time</th></tr></thead><tbody id="tentry"></tbody></table>');
+        var $display = $('<section><table class="tweetData center"><thead><tr><th>From</th><th>Tweet</th><th>Time</th></tr></thead><tbody id="tentry"></tbody></table></section>');
         $display.appendTo($body);
 
         $('#newTweetButton').on('click',function(){
