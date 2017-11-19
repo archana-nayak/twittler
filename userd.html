@@ -3,6 +3,7 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <link rel="stylesheet" href="twittler.css">
   </head>
   <body>
     
@@ -13,8 +14,11 @@
         var userName = searchString.split('?u=')[1];
         console.dir(userName);
         var $body = $('body');
-        $body.html();
-        var $user = '<table><thead><tr><td><div id="userDisplay"></div></td?</tr></thead><tbody id="tweetsDisplay"></tbody></table>';
+        $body.html('');
+        var $indexHeader = $('<header><h1><a href="index.html">Home</a></h1></header>');
+        $indexHeader.text('Twittler');
+        $indexHeader.appendTo($body);
+        var $user = '<section><table class="center"><thead><tr><th id="userDisplay"></th><th>Time Created</th></tr></thead><tbody id="tweetsDisplay"></tbody></table></section>';
         ($body).append($user);
         // var userName = users[0];
         $('#userDisplay').text('@' + userName);
