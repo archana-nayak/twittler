@@ -34,6 +34,15 @@ header .homepage{
   color: black;
   height: 85px;
 }
+.divspace {
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: 0;
+  text-align: left;
+}
 table.center {
   border-collapse: separate;
   border-spacing: 0;
